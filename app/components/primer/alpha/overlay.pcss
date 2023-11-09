@@ -9,8 +9,14 @@ anchored-position[popover] {
 
 .Overlay {
   display: flex;
+  border-width: 0;
+  padding: 0;
 }
 
-anchored-position.not-anchored::backdrop {
+anchored-position.not-anchored::backdrop, dialog::backdrop {
   background-color: var(--overlay-backdrop-bgColor, var(--color-neutral-muted));
+}
+
+dialog.Overlay:not([open]) {
+  display: none;
 }
