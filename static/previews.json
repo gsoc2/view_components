@@ -425,6 +425,32 @@
         }
       },
       {
+        "preview_path": "primer/alpha/action_menu/with_groups",
+        "name": "with_groups",
+        "snapshot": "interactive",
+        "skip_rules": {
+          "wont_fix": [
+            "region"
+          ],
+          "will_fix": [
+            "color-contrast"
+          ]
+        }
+      },
+      {
+        "preview_path": "primer/alpha/action_menu/with_items_and_groups",
+        "name": "with_items_and_groups",
+        "snapshot": "interactive",
+        "skip_rules": {
+          "wont_fix": [
+            "region"
+          ],
+          "will_fix": [
+            "color-contrast"
+          ]
+        }
+      },
+      {
         "preview_path": "primer/alpha/action_menu/wide",
         "name": "wide",
         "snapshot": "interactive",
@@ -3001,6 +3027,19 @@
         "preview_path": "primer/alpha/dialog/with_text_input",
         "name": "with_text_input",
         "snapshot": "false",
+        "skip_rules": {
+          "wont_fix": [
+            "region"
+          ],
+          "will_fix": [
+            "color-contrast"
+          ]
+        }
+      },
+      {
+        "preview_path": "primer/alpha/dialog/with_auto_complete",
+        "name": "with_auto_complete",
+        "snapshot": "interactive",
         "skip_rules": {
           "wont_fix": [
             "region"
@@ -6168,6 +6207,19 @@
       {
         "preview_path": "primer/alpha/text_field/with_auto_check_ok",
         "name": "with_auto_check_ok",
+        "snapshot": "false",
+        "skip_rules": {
+          "wont_fix": [
+            "region"
+          ],
+          "will_fix": [
+            "color-contrast"
+          ]
+        }
+      },
+      {
+        "preview_path": "primer/alpha/text_field/with_auto_check_accepted",
+        "name": "with_auto_check_accepted",
         "snapshot": "false",
         "skip_rules": {
           "wont_fix": [
