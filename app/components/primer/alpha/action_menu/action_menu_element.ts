@@ -261,7 +261,7 @@ export class ActionMenuElement extends HTMLElement {
       this.#hide()
     } else {
       this.#show()
-      this.#firstItem?.focus()
+      setTimeout(() => this.#firstItem?.focus(), 10)
     }
   }
 
