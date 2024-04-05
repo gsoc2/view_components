@@ -6,9 +6,9 @@ gemspec
 rails_version = (ENV["RAILS_VERSION"] || "7.1.1").to_s
 
 # remove when https://github.com/rails/rails/pull/47142 is merged
-gem "rack", "~> 2.2"
+gem "rack", "~> 2.2", ">= 2.2.8.1"
 
-gem "rack-cors"
+gem "rack-cors", ">= 2.0.2"
 gem "rake", "~> 13.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -16,17 +16,17 @@ gem "rake", "~> 13.1"
 # rubocop:disable Bundler/DuplicatedGem
 if rails_version == "main"
   git "https://github.com/rails/rails", ref: "main" do
-    gem "actionview"
+    gem "actionview", ">= 7.1.2"
     gem "activemodel"
     gem "activerecord"
     gem "activesupport"
-    gem "railties"
+    gem "railties", ">= 7.1.3.1"
   end
 else
-  gem "actionview", rails_version
+  gem "actionview", ">= 7.1.2", rails_version
   gem "activemodel", rails_version
   gem "activesupport", rails_version
-  gem "railties", rails_version
+  gem "railties", ">= 7.1.3.1", rails_version
 end
 # rubocop:enable Bundler/DuplicatedGem
 
@@ -38,7 +38,7 @@ gem "webpacker", "~> 5.0"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.2", require: false
 
-gem "lookbook", "~> 2.1.1" unless rails_version.to_f < 7
+gem "lookbook", "~> 2.2.0"
 gem "view_component", path: ENV["VIEW_COMPONENT_PATH"] if ENV["VIEW_COMPONENT_PATH"]
 
 gem "kramdown", "~> 2.4"
@@ -58,9 +58,9 @@ group :development do
   gem "allocation_stats", "~> 0.1"
   gem "allocation_tracer", "~> 0.6.3"
   gem "benchmark-ips", "~> 2.12.0"
-  gem "capybara", "~> 3.39.2"
-  gem "cuprite", "~> 0.14.3"
-  gem "erb_lint", "~> 0.4.0"
+  gem "capybara", "~> 3.40.0"
+  gem "cuprite", "~> 0.15.0"
+  gem "erb_lint", "~> 0.5.0"
   gem "erblint-github", "~> 0.5.1"
   gem "listen", "~> 3.0"
   gem "matrix", "~> 0.4.2"
@@ -69,7 +69,7 @@ group :development do
   gem "rubocop"
   gem "rubocop-github", "~> 0.20.0"
   gem "rubocop-performance"
-  gem "rubocop-rails"
+  gem "rubocop-rails", ">= 2.22.2"
   gem "rubocop-rails-accessibility", "~> 0.2.0"
   gem "simplecov", "~> 0.22.0"
   gem "simplecov-console", "~> 0.9.1"
@@ -77,5 +77,5 @@ group :development do
   gem "sprockets-rails"
   gem "thor"
   gem "timecop"
-  gem "yard", "~> 0.9.25"
+  gem "yard", "~> 0.9.35"
 end
